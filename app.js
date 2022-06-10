@@ -4,41 +4,24 @@ const title1 = document.querySelector(".hello")
 console.dir(title1)
 
 function handleTitleClick() {
-  console.log("title was clicked!")
-  title1.style.color = "orange"
-}
-function handleMouseEnter() {
-  title1.innerText = "mouse is here"
-}
-function handleMouseLeave() {
-  title1.innerText = "mouse is gone!"
-}
-function handleWindowResize() {
-  document.body.style.backgrondColor = "tomato"
-  console.log("resize")
-}
-function handleWindowCopy() {
-  alert("copier!!")
-}
-function handleWindowPaste() {
-  alert("pasteㅠㅠ")
-}
-function handleWindowOffline() {
-  alert("offLine")
-}
-function handleWindowOnline() {
-  alert("gooooooooooooooooooood")
-}
-title1.addEventListener("click", handleTitleClick)
-title1.addEventListener("mouseenter", handleMouseEnter)
-title1.addEventListener("mouseleave", handleMouseLeave)
-//javascipt에 function을 넘겨주기만 하고 유저가 클릭 시에 function이 실행되도록 한다.
+  // const clickedClass = "clicked"
+  // if (title1.className === clickedClass) {
+  //   title1.className = "";
+  // } else {
+  //   title1.className = clickedClass;
+  // }
+  // -----------------------------------------------
+  // if (title1.classList.contains(clickedClass)) {
+  //   title1.classList.remove(clickedClass)
+  // } else {
+  //   title1.classList.add(clickedClass)
+  // }
+  // ------------------------------------------------
+  title1.classList.toggle("clicked")
 
-window.addEventListener("resize", handleWindowResize)
-window.addEventListener("copy", handleWindowCopy)
-window.addEventListener("paste", handleWindowPaste)
-window.addEventListener("offline", handleWindowOffline)
-window.addEventListener("online", handleWindowOnline)
+}
+
+title1.addEventListener("click", handleTitleClick)
 
 
 //Javasciprt는 html element을 불러와서 읽고 변경할 수 있다.
