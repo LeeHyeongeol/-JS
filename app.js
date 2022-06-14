@@ -1,17 +1,12 @@
-const loginForm = document.querySelector('#login-form');
-const loginInput = document.querySelector("input");
+const loginForm = document.querySelector("#login-form")
+const buttonForm = document.querySelector("#login-form button")
+const loginInput = document.querySelector("#login-form input")
 
-function onLoginSubmit(event) {
-  //브라우저의 기본 동작을 막는다.
-  event.preventDefault()
-  console.log(event.value)
+function handleSubmit(e) {
+e.preventDefault()
+console.log(e)
+// const inputValue = loginInput.value
+  // console.log(inputValue)
 }
+loginForm.addEventListener("submit", handleSubmit)
 
-function handleButtonClick() {
-  console.dir("hello " + loginInput.value)
-  alert(loginInput.value)
-  loginInput.value = ""
-
-}
-// onLoginSubmit() 이 있다면 submit event 발생 시 바로 함수를 실행시킨다.
-loginForm.addEventListener("submit", onLoginSubmit)
