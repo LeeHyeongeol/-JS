@@ -14,4 +14,4 @@ function sayHello() {
 }
 
 sayHello()
-setInterval(sayHello, 1000)
+// setInterval(sayHello, 1000)
